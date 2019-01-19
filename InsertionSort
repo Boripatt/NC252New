@@ -1,0 +1,128 @@
+
+public class lnsertionSort {
+	private int [] element;
+	private int aItem;
+	
+	public lnsertionSort(int item) {
+		if(item > 0)
+			this.element = new int[item];
+		else
+			this.element = new int[10];
+		aItem = 0;
+		
+	}
+	public void insert(int a) {
+		this.element[aItem] = a;
+		aItem++;
+	}
+	public void show() {
+		for(int i=0;i<aItem;i++) {
+			System.out.print(this.element[i]+"");
+		}
+		System.out.println("");
+	}
+	public void sort() {
+		int out ;
+		int temp;
+		for(out = 1;out < aItem;out++) {
+			temp = this.element[out];
+			int in;
+			for(in = out;in > 0 && this.element[in-1]>=temp;in--) {
+				this.element[in]=this.element[in-1];
+			}
+			this.element[in]=temp;// InsertionSort
+		}
+	}
+	public void bubbleSort() {
+		int out,in;
+		for (out = aItem -1; out > 0;out--) {
+			for(in = 0;in < out;in++) {
+				if(this.element[in]>this.element[in + 1]) {
+					this.swap(in,in+1);
+				}
+			}
+		}
+	}
+	private void swap (int left,int right) {
+		int temp = this.element[left];
+		this.element[left]=this.element[right];
+		this.element[right]=temp;//BubbleSorrt
+	}
+	private int maxItem;
+	private double[]stackArry;
+	private int top;
+	...............................
+	public double StackArray(int Item )
+	{
+		maxItem = 0;
+		
+		stackArray = new double[maxItem];
+		top = -1; //
+	//...............................
+	public void push(double m)
+	{
+		
+		stackArry[++top] = m;//?????????????????????
+	}
+	public double pop()//???????????????
+	{
+		return stackArry[top--];//???????????????
+	}
+	public double peek() //??????????????
+	{
+		return StackArray(top);
+	}
+	//--------------------------------
+	public boolean isEmpaty()
+	{
+		return(top ==-1);
+	}
+	public boolean isFull()
+	{
+		return(top == maxItem-1);//Stack
+	}
+	//--------------------------------
+	public class Queue {
+		private int maxItem;
+		private int[]queueArray;
+		private int name;
+		private int item;
+	}
+	
+	public void Queue(int a)
+	{
+		maxItem = 0;
+		int[] QueAttay = new int[a];
+		int name = 0;
+		int item = 1;
+	}
+	public void insert1(int j)
+	{
+		int rear;
+		if(rear == maxItem-1)
+			rear = -1;
+		int[] queueArray;
+		queueArray[++rear]=j;
+		int Item;
+		Item++;
+	}
+	public void insert11(int j)
+	{
+		int rear;
+		if(rear ==maxItem-1)
+			rear=-1;
+		int[] queueArrat;
+		queueArrat[++rear]=j;
+		int Item;
+		Item++;
+	}
+	
+	}
+	
+	
+	
+	
+	
+
+
+
